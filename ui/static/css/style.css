@@ -1,0 +1,229 @@
+.VOD_Session_Simulator {
+width:100%;
+height:100px;
+background:rgb(110,179,62);
+font-family: "CalibriItalic";
+color: rgb(77, 77, 77);
+line-height: 0;
+  /*-moz-transform: matrix( 0.4048230760786,0,0,0.4048230760786,0,0);
+  -webkit-transform: matrix( 0.4048230760786,0,0,0.4048230760786,0,0);
+  -ms-transform: matrix( 0.4048230760786,0,0,0.4048230760786,0,0);
+  position: absolute;
+  left: 343.767px;
+  top: 190.869px;
+  z-index: 40;*/
+}
+.itaas {
+  background-image: url("./itaas.png");
+  position: absolute;
+  left: 435px;
+  top: 113px;
+  width: 110px;
+  height: 145px;
+  z-index: 39;
+}
+.menu{
+	background-color: rgb(77, 77, 77);
+	float: left;
+    width: 100%;
+}
+.menu ul {
+	margin-left:-16px;
+}
+.menu ul li {
+    float: left;
+    margin-left: 20px;
+}
+.menu .menu_unselected{
+	font-size: 33.333px;
+	font-family: "Calibri";
+	color: rgb(255, 255, 255);
+}
+
+.menu .menu_selected{
+	font-size: 33.333px;
+	font-family: "Calibri";
+	color: rgb(110, 179, 62);
+}
+
+a {
+text-decoration: none;
+}
+.logo{
+float:left;
+ margin-left: 45px;
+ margin-top: 5px;
+width:84px;
+height:94px;
+border:none;
+}
+.logotext{    
+	float: left;
+    margin-left: 10px;
+	
+	}
+	
+/*  Stats page css */
+.green_rectangle_stats {
+  position: absolute;
+  border: 1px solid;
+  border-radius: 5px;
+  left: 30px;
+  top: 325px;
+  width: 1300px;
+  height: 450px;
+  padding: 10px;
+}
+.status_form {
+    position: absolute;
+    border: 1px solid;
+    border-radius: 5px;
+    left: 30px;
+    top: 182px;
+    width: 1300px;
+    height: 100px;
+    padding: 10px;
+}
+.stats_field{
+	font-size: x-large;
+    font-family: "Calibri";
+    color: rgb(77, 77, 77);
+    line-height: 1.064;
+	width: 50%;
+    height: 20%;
+    z-index: 34;
+    float: left;
+}
+
+.status_form .stats_field {
+	font-size: x-large;
+    font-family: "Calibri";
+    color: rgb(77, 77, 77);
+    line-height: 1.064;
+	width: 50%;
+    height: 50%;
+    z-index: 34;
+    float: left;
+}
+.main_form {
+    position: absolute;
+    border: 1px solid;
+    border-radius: 5px;
+    left: 30px;
+    top: 182px;
+    width: 1300px;
+    height: 50px;
+    padding: 10px;
+}
+.green_rectangle_main{
+	  position: absolute;
+  border: 1px solid;
+  border-radius: 5px;
+  left: 30px;
+  top: 268px;
+  width: 1300px;
+  height: 450px;
+  padding: 10px;
+}
+.main_form .stats_field {
+	font-size: x-large;
+    font-family: "Calibri";
+    color: rgb(77, 77, 77);
+    line-height: 2;
+	width: 50%;
+    height: 50%;
+    z-index: 34;
+    float: left;
+}
+
+.stats_form_main_class{
+    float: left;
+    width: 98%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main_form .stats_form_outer {
+	float: left;   
+	background-color: rgb(187, 234, 255);
+	height:220px
+}
+.stats_form_outer {
+	float: left;  
+	background-color: rgb(187, 234, 255);	
+	border-radius:10px;
+}
+
+.main_form .stats_form_input {
+	margin-top: 8px;
+}
+.stats_form_input {
+    border-width: 2.083px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 10px;
+    width: 250.834px;
+    height: 30.834px;
+    font-size:20px
+}
+.stats_field span{
+	width: 40%;
+    float: left;
+}
+
+.stats_form_buttons {
+	float: right;
+    margin: 15px 5px;
+}
+
+.stats_form_buttons  .stats_button {
+  border-radius: 10px;
+  font-family: "Calibri";
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 77, 77);
+  width: 194px;
+  height: 53px;
+  z-index: 12;
+}
+
+.stats_field p{
+text-transform: lowercase;
+font-size: 10px;
+color: black;
+}
+
+.error p{
+ text-transform: capitalize;
+ text-align: center;
+ font: bold 14px Georgia;
+ color:red
+}
+.div-table{
+  display:table;         
+  width:100%;         
+  border:1px solid  #666666;         
+  border-spacing:5px;/*cellspacing:poor IE support for  this*/
+  overflow:hidden
+}
+.div-table-row{
+  /* width:100%;  */
+}
+
+.div-table-col{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:10%;         
+  background-color: rgb(187, 234, 255);
+  display: inline-block;  
+}
+
+.div-table-col span{
+  width:200%;
+  display: inline-block;
+}
+
+.div-table-row input{
+  width:98%;
+}

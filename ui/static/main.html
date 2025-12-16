@@ -1,0 +1,73 @@
+<div>
+
+	<div class="VOD_Session_Simulator">
+	<a href="#main"><img src="./images/logo.png" class="logo"/></a>
+	<div class="logotext"><h3>VOD Session</h3> <h3>Simulator</h3></div>
+	 
+	</div>
+	<div class="menu">
+		<ul style="-webkit-margin-before: 0em; -webkit-margin-after: 0em;">
+			<li style="display:inline"><a class="menu_selected" href="#main">Main</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#stats">Statistics</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#report">Report</a></li>
+		</ul>
+	</div>
+	
+	<div>
+	<form>
+	<div class="main_form">
+		<div class="stats_field">Existing Configuration 
+		<select ng-model="user.template"  ng-options="template for template in templates" class="stats_form_input"></select></div>
+		<div class="stats_field"></div>
+	</div>
+	<div class="error"><p>{{mainError}}</p></div>
+	<div class="green_rectangle_main">
+		<div class="stats_form_outer">
+			<div class="stats_form_main_class">
+				<div class="stats_field">
+					<span>HeadEnds</span>
+					<select ng-model="user.headend" ng-options="headend for headend in headends" class="stats_form_input"></select>
+				</div>
+				<div class="stats_field">
+					<span>TSID</span>
+					<input type="text" id="tsid" placeholder="tsid" class="stats_form_input" ng-model="user.tsid">
+				</div>
+				<div class="stats_field">	
+					<span>MAC</span>
+					<input type="text" id="mac" placeholder="mac" class="stats_form_input" ng-model="user.mac" >
+					<button class="stats_button" ng-click="getaccount()">Get Rentals</button><br>
+				</div>
+				<div class="stats_field">
+					<span>DeliveryId</span>				
+					<input type="text" id="deliveryid" placeholder="deliveryid" class="stats_form_input" ng-model="user.deliveryid"> 
+					<button class="stats_button" ng-click="asset()">Get Asset</button>
+				</div>
+				<div class="stats_field">
+					<span>Rentals</span>
+					<select ng-model="user.deliveryid" class="stats_form_input" id="rentals" ng-change="render_npt()">
+					<option ng-repeat="rental in user.rentals" value="{{rental.id}}" npt="{{rental.npt}}">{{rental.name}}</option>
+					</select>					
+				</div>
+				<div class="stats_field">
+				<input type="hidden" ng-model="user.npt">
+				<textarea ng-model="user.status" name="string"></textarea>
+				</div>
+				<button class="stats_button" ng-click="start()" id="start">Start</button>
+				<button class="stats_button" ng-click="play()">PLAY</button>
+				<button class="stats_button" ng-click="pause()">PAUSE</button>
+				<button class="stats_button" ng-click="ff()">FF</button>
+				<button class="stats_button" ng-click="rw()">RW</button>
+				<button class="stats_button" ng-click="teardown()">TEARDOWN</button>
+			</div>
+		</div>
+
+			<div class="stats_form_buttons">
+				
+			</div>
+
+	</div>
+	</form>
+	<p>{{user}}</p>
+	</div>
+	
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "Session-Simulator",
+  "version": "1.0.0",
+  "description": "Session Simulator",
+  "author": "Saurabh Singh <saurabh.singh6@cognizant.com>",
+  "private": true,
+  "contributors": [ ],
+  "dependencies": {
+    "express": "^4.13.3",
+    "path": "^0.12.7",
+    "body-parser": "^1.14.1",
+    "fs": "^0.0.2",
+	"http": "^0.0.0"
+  },
+  "main": "server.js"
+}
+

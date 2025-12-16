@@ -1,0 +1,79 @@
+<div>
+
+	<div class="VOD_Session_Simulator">
+	<a href="#main"><img src="./images/logo.png" class="logo"/></a>
+	<div class="logotext"><h3>VOD Session</h3> <h3>Simulator</h3></div>
+	 
+	</div>
+	<div class="menu">
+		<ul style="-webkit-margin-before: 0em; -webkit-margin-after: 0em;">
+			<li style="display:inline"><a class="menu_unselected" href="#main">Main</a></li>
+			<li style="display:inline"><a class="menu_selected" href="#stats">Statistics</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#report">Report</a></li>
+		</ul>
+	</div>
+	<div class="error"><p>{{statsError }}</p></div>
+	<div>
+	<div class="status_form">
+		<div class="stats_field">
+		<span>Batch ID </span>
+		<input class="stats_form_input" type="text" ng-model="batchID" ng-change="refresh()">
+		</div>
+		<div class="stats_field">
+		<span>Batch Start Time</span> <input class="stats_form_input" type="text" ng-model="starttime" readonly>
+		</div>
+		<div class="stats_field">
+			<span>Batch Finish Time</span> <input class="stats_form_input" type="text" ng-model="finishtime" readonly>
+		</div>
+	</div>		
+	<div class="green_rectangle_stats">
+		<div class="stats_form_outer">
+			<div class="stats_form_main_class">
+				<div class="stats_field">
+					<span>Sessions Creating</span> <input class="stats_form_input" type="text" ng-model="sessions_creating" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Sessions Tearing</span> <input class="stats_form_input" type="text" ng-model="sessions_tearing" readonly>
+				</div>
+				<div class="stats_field">	
+					<span>Sessions Created</span><input class="stats_form_input" type="text" ng-model="sessions_created" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Session Torn  By Client</span> <input class="stats_form_input" type="text" ng-model="sessions_torn" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Sessions Create Failed</span> <input class="stats_form_input" type="text" ng-model="sessions_create_failed" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Sessions Teardown Failed</span> <input class="stats_form_input" type="text" ng-model="sessions_teardown_failed" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Sessions Existing</span> <input class="stats_form_input" type="text" ng-model="sessions_existing" readonly>
+				</div>
+				<div class="stats_field">	
+					<span>Sessions Torn By Server</span><input class="stats_form_input" type="text" ng-model="sessions_torn_by_server" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Average Startup Time <p>(ms)</p></span> <input class="stats_form_input" type="text" ng-model="average_setup_time" readonly>
+				</div>
+				<div class="stats_field">
+					<span>Average Teardown Time <p>(ms)</p></span> <input class="stats_form_input" type="text" ng-model="average_release_time" readonly>
+				</div>
+				
+
+			</div>
+		 </div>
+
+			<div class="stats_form_buttons">
+				<button class="stats_button" ng-click="stop()">
+					Stop
+				</button>
+				<button class="stats_button" ng-click="back()">
+					Back
+				</button>
+			</div>
+
+	</div>
+	
+	</div>
+</div>

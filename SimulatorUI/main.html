@@ -1,0 +1,73 @@
+<div>
+
+	<div class="VOD_Session_Simulator">
+	<a href="#main"><img src="./images/logo.png" class="logo"/></a>
+	<div class="logotext"><h3>VOD Session</h3> <h3>Simulator</h3></div>
+	 
+	</div>
+	<div class="menu">
+		<ul style="-webkit-margin-before: 0em; -webkit-margin-after: 0em;">
+			<li style="display:inline"><a class="menu_selected" href="#main">Main</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#stats">Statistics</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#report">Report</a></li>
+		</ul>
+	</div>
+	
+	<div>
+	<form>
+	<div class="main_form">
+		<div class="stats_field">Existing Configuration 
+		<select ng-model="user.template" ng-change="loadTemplate()" ng-options="template for template in templates" class="stats_form_input"></select></div> 
+		<div class="stats_field">HeadEnds
+		<select ng-model="user.data.headend" ng-options="headend for headend in headends" class="stats_form_input"></select> </div> 
+	</div>
+	<div class="error"><p>{{mainError }}</p></div>
+	<div class="green_rectangle_main">
+		<div class="stats_form_outer">
+			<div class="stats_form_main_class">
+				<div class="stats_field">
+					<span>Asset File </span>
+					<select ng-model="user.data.asset_file" ng-options="asset_file for asset_file in asset_files" class="stats_form_input" required></select>
+				</div>
+				<div class="stats_field">
+					<span>Number of Sessions</span>
+					<input class="stats_form_input" type="number" ng-model="user.batch_parameters.creation_rate" min=1 required>
+				</div>
+				<div class="stats_field">	
+					<span>MAC Address File </span>
+					<select ng-model="user.data.mac_file" ng-options="mac_file for mac_file in mac_files" class="stats_form_input" required></select>
+				</div>
+				<div class="stats_field">	
+					<span>Session Duration<p>(Seconds)</p></span><input class="stats_form_input" type="number" ng-model="user.batch_parameters.session_duration" required>
+				</div>
+				<div class="stats_field">
+					<span>MDMS Gateway</span>
+					<!-- <input class="stats_form_input" type="text" ng-model="user.avn.avn_gw_host" placeholder="IP:PORT" required> -->
+					<select ng-model="user.avn.avn_gw_host" ng-options="avn for avn in avns" class="stats_form_input" required></select>
+				</div>
+				<div class="stats_field">
+					<span>Ramp up time<p>(Seconds)</p></span>
+					<input class="stats_form_input" type="number" ng-model="user.batch_parameters.creation_period" min=1 required>
+				</div>
+			</div>
+		</div>
+
+			<div class="stats_form_buttons">
+				<button class="stats_button" ng-click="startBatch()">
+					Start Batch
+				</button>
+				<button class="stats_button" ng-click="saveTemplate()">
+					Save
+				</button>
+				<button class="stats_button" ng-click="reset()">
+					Cancel
+				</button>
+			</div>
+
+	</div>
+	</form>
+	<!-- <p>{{user }}</p> -->
+	
+	</div>
+	
+</div>

@@ -1,0 +1,66 @@
+<div>
+
+	<div class="VOD_Session_Simulator">
+	<a href="#main"><img src="./images/logo.png" class="logo"/></a>
+	<div class="logotext"><h3>VOD Session</h3> <h3>Simulator</h3></div>
+	 
+	</div>
+	<div class="menu">
+		<ul style="-webkit-margin-before: 0em; -webkit-margin-after: 0em;">
+			<li style="display:inline"><a class="menu_unselected" href="#main">Main</a></li>
+			<li style="display:inline"><a class="menu_unselected" href="#stats">Statistics</a></li>
+			<li style="display:inline"><a class="menu_selected" href="#report">Report</a></li>
+		</ul>
+	</div>
+	<div class="error"><p>{{reportError }}</p></div>
+		<div class="div-table">
+			<div class="div-table-row">
+				<a ng-click="order('job_id')"><div class="div-table-col"><span>Batch ID</span>
+				</div></a>
+				<a ng-click="order('info.sessions_created')"><div class="div-table-col"><span>Created</span>
+				</div></a>
+				<a ng-click="order('info.sessions_create_failed')"><div class="div-table-col"><span>Failed</span>
+				</div></a>
+				<a ng-click="order('info.sessions_teardown_failed')"><div class="div-table-col"><span>Teardown Failed</span>
+				</div></a>
+				<a ng-click="order('info.sessions_torn')"><div class="div-table-col"><span>Torn By Client</span>
+				</div></a>
+				<a ng-click="order('info.sessions_torn_by_server')"><div class="div-table-col"><span>Torn By Server</span>
+				</div></a>
+				<a ng-click="order('info.average_setup_time')"><div class="div-table-col"><span>Avg. Startup Time</span>
+				</div></a>
+				<a ng-click="order('info.average_release_time')"><div class="div-table-col"><span>Avg. Teardown Time</span>
+				</div></a>
+				<a ng-click="order('start_time')"><div class="div-table-col"><span>Start Time</span>
+				</div></a>
+				<a ng-click="order('end_time')"><div class="div-table-col"><span>Finish Time</span>
+				</div></a>
+			</div>
+			<div class="div-table-row" ng-repeat="data in report | orderBy:predicate:reverse | filter:{job_id : searchText }">
+				<div class="div-table-col"><input type="text" ng-model="data.job_id" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.sessions_created" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.sessions_create_failed"  readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.sessions_teardown_failed" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.sessions_torn" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.sessions_torn_by_server" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.average_setup_time" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.info.average_release_time" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.start_time" readonly>
+				</div>
+				<div class="div-table-col"><input type="text" ng-model="data.end_time" readonly>
+				</div>
+			</div>
+			<div class="stats_form_buttons">
+				<input class="stats_form_input" type="text" ng-model="searchText" placeholder="Search Batch">
+				<button class="stats_button" ng-click="back()">Back</button>
+			</div>
+		</div>
+</div>
